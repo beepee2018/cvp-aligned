@@ -134,9 +134,9 @@
 
   /* ── SYSTEM MAP STRIP ── */
   .system-map {
-    background: var(--bg-offwhite);
-    border-bottom: 1px solid var(--border);
-    padding: 10px 48px;
+    background: var(--navy);
+    border-bottom: 1px solid rgba(4,222,187,0.15);
+    padding: 9px 48px;
     display: flex;
     align-items: center;
     gap: 0;
@@ -147,9 +147,21 @@
     overflow-x: auto;
   }
   .sm-label {
-    color: var(--text-faint);
-    margin-right: 14px;
+    color: var(--teal);
+    margin-right: 16px;
     white-space: nowrap;
+    flex-shrink: 0;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sm-divider {
+    display: inline-block;
+    width: 1px; height: 12px;
+    background: rgba(255,255,255,0.15);
+    margin: 0 4px;
     flex-shrink: 0;
   }
   .sm-node {
@@ -161,20 +173,20 @@
   .sm-item {
     padding: 4px 12px;
     border-radius: 20px;
-    border: 1px solid var(--border-md);
-    color: var(--text-muted);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.38);
     white-space: nowrap;
-    background: #fff;
+    background: transparent;
     transition: none;
   }
   .sm-item.active {
-    background: var(--teal-lt);
-    border-color: var(--teal-border);
-    color: var(--teal-xdk);
+    background: rgba(4,222,187,0.12);
+    border-color: rgba(4,222,187,0.35);
+    color: var(--teal);
     font-weight: 500;
   }
   .sm-arrow {
-    color: var(--text-faint);
+    color: rgba(255,255,255,0.18);
     margin: 0 6px;
     font-size: 10px;
   }
@@ -560,7 +572,8 @@
 
   <!-- SYSTEM MAP -->
   <div class="system-map">
-    <span class="sm-label">CS System:</span>
+    <span class="sm-label">Tekion Value OS</span>
+    <span class="sm-divider"></span>
     <div class="sm-node">
       <span class="sm-item">Dealer Maturity Model</span>
       <span class="sm-arrow">→</span>
